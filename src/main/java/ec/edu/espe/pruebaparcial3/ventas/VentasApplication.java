@@ -2,6 +2,8 @@ package ec.edu.espe.pruebaparcial3.ventas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class VentasApplication {
@@ -10,4 +12,8 @@ public class VentasApplication {
 		SpringApplication.run(VentasApplication.class, args);
 	}
 
+	@Bean
+	public RestTemplate restTemplate(){
+		return new RestTemplate();
+	}
 }
